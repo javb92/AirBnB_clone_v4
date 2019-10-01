@@ -1,7 +1,7 @@
 $(document).ready(function () {
   let AmenityChecked = [];
   $('input[type=checkbox]').change(function () {
-    let name = $(this).attr('data-name');
+    const name = $(this).attr('data-name');
     if ($(this).is(':checked')) {
       AmenityChecked.push(name);
       console.log(AmenityChecked);
