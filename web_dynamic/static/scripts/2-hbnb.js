@@ -9,10 +9,10 @@ $(document).ready(function () {
     }
     $('.amenities h4').text(AmenityChecked.join(', '));
   });
-  $.get('http://0.0.0.0:5001/api/v1/status/', function (data, status) {
+  $.get('http://localhost:5001/api/v1/status/', function (data, status) {
     if (status === 'success') {
       $('DIV#api_status').toggleClass('available');
     }
-    console.log(status);
+    console.log(status + 'ESTADO DEL GET');
   });
 });

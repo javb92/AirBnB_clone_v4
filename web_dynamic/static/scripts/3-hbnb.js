@@ -9,7 +9,7 @@ $(document).ready(function () {
     }
     $('.amenities h4').text(AmenityChecked.join(', '));
   });
-  $.get('http://0.0.0.0:5001/api/v1/status/', function (data, status) {
+  $.get('http://127.0.0.1:5001/api/v1/status/', function (data, status) {
     if (status === 'success') {
       $('DIV#api_status').toggleClass('available');
     }
@@ -17,7 +17,7 @@ $(document).ready(function () {
   });
   $.ajax({
     type: 'POST',
-    url: 'http://0.0.0.0:5001/api/v1/places_search/',
+    url: 'http://127.0.0.1:5001/api/v1/places_search/',
     data: JSON.stringify({}),
     contentType: 'application/json',
     success: function (data) {
